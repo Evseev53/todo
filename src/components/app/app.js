@@ -1,31 +1,42 @@
-import React from "react";
+import React, { Component } from "react";
 import "./app.css"
 import NewTaskForm from "../new-task-form/new-task-form";
 import TaskList from "../task-list/task-list";
 import Footer from "../footer/footer";
 
+export default class App extends Component {
 
-const App = () => {
+    state = {
+        todoData: [
+            {label: 'Completed task', id: 1},
+            {label: 'Editing task', id: 2},
+            {label: 'Active task', id: 3}
+        ]
+    }
 
-    const todoData = [
-        {label: 'Completed task', condition: 'completed', id: 1},
-        {label: 'Editing task', condition: 'editing', id: 2},
-        {label: 'Active task', condition: null, id: 3}
-    ];
+    deleteItem = (id) => {
+        this.setState(({ todoData }) => {
+            const newData = todoData.filter(el => el.id !== id);
+            return {
+                todoData: newData
+            }
+        })
+    }
 
-    return (
-        <section className="todoapp">
-            <header className="header">
-                <h1>todos</h1>
-                <NewTaskForm />
-            </header>
-            <section className="main">
-                <TaskList todos={todoData}/>
-                <Footer />
+    render() {
+        return (
+            <section className="todoapp">
+                <header className="header">
+                    <h1>todos</h1>
+                    <NewTaskForm />
+                </header>
+                <section className="main">
+                    <TaskList todos={this.state.todoData}
+                              onDeleted={(id) => this.deleteItem(id)}
+                    />
+                    <Footer />
+                </section>
             </section>
-        </section>
-    )
-};
-
-
-export default App;
+        )
+    }
+}
