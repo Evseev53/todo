@@ -1,14 +1,25 @@
 import React from "react";
 import "./new-task-form.css"
 
-const NewTaskForm = () => {
+const NewTaskForm = ( { createTodoItem } ) => {
+    const onSubmit = (e) => {
+        const newTodo = e.target.value;
+        createTodoItem(newTodo);
+        e.target.value = '';
+    }
+
     return (
         <input
             className="new-todo"
             placeholder="What needs to be done?"
             autoFocus
+            onBlur={ onSubmit }
         />
     )
+}
+
+NewTaskForm.defaultProps = {
+    createTodoItem() { return new Error('В NewTaskForm не передана функция createTodoItem') }
 }
 
 export default NewTaskForm;
