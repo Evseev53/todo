@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./task-list.css"
 import Task from "../task/task";
 
@@ -7,6 +8,13 @@ export default class TaskList extends Component {
         onDeleted() { return new Error('В TaskList не передана функция onDeleted') },
         onToggleDone() { return new Error('В TaskList не передана функция onToggleDone') },
         onToggleEdit() { return new Error('В TaskList не передана функция onToggleEdit') }
+    }
+
+    static propsTypes = {
+        todos: PropTypes.arrayOf(PropTypes.object),
+        onDeleted: PropTypes.func,
+        onToggleDone: PropTypes.func,
+        onToggleEdit: PropTypes.func
     }
 
     render() {
