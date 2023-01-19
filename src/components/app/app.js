@@ -71,7 +71,13 @@ export default class App extends Component {
     }
   };
 
-  createTodoItem(label) {
+  getSec = (min, sec) => {
+    const minInSec = min * 60;
+    return minInSec + Number(sec);
+  }
+
+  createTodoItem = (label, valueMin = 0, valueSec = 0) => {
+    const sumSec = this.getSec(valueMin, valueSec);
     if (label) {
       const newItem = {
         label,
@@ -79,6 +85,7 @@ export default class App extends Component {
         done: false,
         id: this.maxId++,
         date: new Date(),
+        sec: sumSec,
       };
       this.setState(({ todoData }) => {
         if (todoData.length) {
@@ -90,21 +97,29 @@ export default class App extends Component {
     }
   }
 
+  updateSecondsInTodo = (newSec, id) => {
+    const { todoData } = this.state;
+    const todo = todoData.filter(el => el.id === id);
+    if (todo.length) {
+      todo[0].sec = newSec;
+    }
+  }
+
   render() {
     const { todoData } = this.state;
     const todoDataVisible = this.tasksFilter(this.state.visible);
     const doneCount = todoData.filter((el) => el.done).length;
     const todoCount = todoData.length - doneCount;
-
     return (
       <section className="todoapp">
         <header className="header">
           <h1>todos</h1>
-          <NewTaskForm createTodoItem={(label) => this.createTodoItem(label)} />
+          <NewTaskForm createTodoItem={this.createTodoItem} />
         </header>
         <section className="main">
           <TaskList
             todos={todoDataVisible}
+            updateSecondsInTodo={this.updateSecondsInTodo}
             onDeleted={(id) => this.deleteItem(id)}
             onToggleDone={this.onToggleDone}
             onToggleEdit={this.onToggleEdit}

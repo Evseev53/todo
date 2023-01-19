@@ -24,8 +24,8 @@
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "no-unused-vars": 0,
+    "no-unused-expressions": "off",
     "indent": ["error", 2],
-    "prettier/prettier": "error",
     "linebreak-style": [0, "unix"],
     "quotes": ["error", "single"],
     "react/react-in-jsx-scope": "off",
@@ -41,6 +41,8 @@
     "consistent-return": "off",
     "no-plusplus": "off",
     "jsx-a11y/control-has-associated-label": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
     "import/order": [
       2,
       {

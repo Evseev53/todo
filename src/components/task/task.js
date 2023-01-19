@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './task.css';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
+import Timer from '../timer/timer';
+
 export default class Task extends Component {
   static defaultProps = {
     onDeleted() {
@@ -63,7 +65,7 @@ export default class Task extends Component {
   };
 
   render() {
-    const { label, id, onDeleted, onToggleDone, onToggleEdit, done, editing, date } = this.props;
+    const { label, id, onDeleted, onToggleDone, onToggleEdit, done, editing, date, sec, updateSecondsInTodo } = this.props;
     const { text } = this.state;
     const distance = formatDistanceToNow(date, { addSuffix: true });
 
@@ -85,8 +87,9 @@ export default class Task extends Component {
           <div className="view">
             <input className="toggle" type="checkbox" defaultChecked={defaultChecked} id={id} onClick={onToggleDone} />
             <label htmlFor={id}>
-              <span className="description">{label}</span>
-              <span className="created">Created {distance}</span>
+              <span className="title">{label}</span>
+              <Timer updateSecondsInTodo={ updateSecondsInTodo } sec={sec} id={id}/>
+              <span className="description">Created {distance}</span>
             </label>
             <button type="button" className="icon icon-edit" onClick={() => onToggleEdit(id)} />
             <button type="button" className="icon icon-destroy" onClick={onDeleted} />

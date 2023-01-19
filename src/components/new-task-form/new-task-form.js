@@ -1,41 +1,73 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './new-task-form.css';
 
-function NewTaskForm({ createTodoItem }) {
-  const onSubmit = (e) => {
-    const newTodo = e.target.value;
-    createTodoItem(newTodo);
-    e.target.value = '';
+export default class NewTaskForm extends Component {
+  static defaultProps = {
+    createTodoItem() {
+      return new Error('В NewTaskForm не передана функция createTodoItem');
+    },
   };
 
-  const onEnterDown = (e) => {
+  static propTypes = {
+    createTodoItem: PropTypes.func,
+  };
+
+  state = {
+    todo: null,
+    min: null,
+    sec: null,
+  };
+
+  onEnterDown = (e) => {
     if (e.code === 'Enter') {
-      const newTodo = e.target.value;
-      createTodoItem(newTodo);
-      e.target.value = '';
+      const { createTodoItem } = this.props;
+      const { todo, min, sec } = this.state;
+      createTodoItem(todo, min, sec);
+      const form = document.querySelector('.new-todo-form');
+      const inputs = form.querySelectorAll('input');
+      inputs.forEach(el => el.value = '');
+      this.setState({
+        todo: null,
+        min: null,
+        sec: null,
+      })
     }
   };
 
-  return (
-    <input
-      className="new-todo"
-      placeholder="What needs to be done?"
-      autoFocus
-      onBlur={onSubmit}
-      onKeyDown={onEnterDown}
-    />
-  );
+  onChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  render() {
+    return (
+      <form className="new-todo-form">
+        <input
+          name="todo"
+          className="new-todo"
+          placeholder="What needs to be done?"
+          autoFocus
+          onKeyDown={this.onEnterDown}
+          onChange={this.onChange}
+        />
+        <input
+          name="min"
+          className="new-todo-form__timer"
+          placeholder="Min"
+          onKeyDown={this.onEnterDown}
+          onChange={this.onChange}
+        />
+        <input
+          name="sec"
+          className="new-todo-form__timer"
+          placeholder="Sec"
+          onKeyDown={this.onEnterDown}
+          onChange={this.onChange}
+        />
+      </form>
+    );
+  }
 }
-
-NewTaskForm.defaultProps = {
-  createTodoItem() {
-    return new Error('В NewTaskForm не передана функция createTodoItem');
-  },
-};
-
-NewTaskForm.propTypes = {
-  createTodoItem: PropTypes.func,
-};
-
-export default NewTaskForm;
