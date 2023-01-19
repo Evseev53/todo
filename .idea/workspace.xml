@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged">
-      <change afterPath="$PROJECT_DIR$/src/components/timer/timer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/timer/timer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task-filter/tasks-filter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-filter/tasks-filter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task-list/task-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list/task-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task-list/task-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list/task-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +164,7 @@
       <workItem from="1673977499883" duration="6157000" />
       <workItem from="1674051825368" duration="15373000" />
       <workItem from="1674069330636" duration="1122000" />
-      <workItem from="1674137768752" duration="13421000" />
+      <workItem from="1674137768752" duration="14478000" />
     </task>
     <task id="LOCAL-00001" summary="верстка готова">
       <created>1672428130359</created>
