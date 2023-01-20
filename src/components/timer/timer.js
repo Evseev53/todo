@@ -22,7 +22,9 @@ export default class Timer extends Component {
     let setIntervalTurnOn;
     if (timer === 'off') {
       setIntervalTurnOn = setInterval(() => {
-        secCopy += 1;
+        if (secCopy > 0) {
+          secCopy -= 1;
+        }
         this.setState({
           seconds: secCopy
         })

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/timer/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -32,28 +40,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Users/s.evseev/WebstormProjects/untitled",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\s.evseev\\WebstormProjects\\react-apps\\todo-kata\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\s.evseev\\AppData\\Local\\JetBrains\\WebStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.evseev/WebstormProjects/untitled&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\s.evseev\\WebstormProjects\\react-apps\\todo-kata\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\s.evseev\\AppData\\Local\\JetBrains\\WebStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\s.evseev\WebstormProjects\react-apps\todo-kata\src\components\task-filter" />
@@ -164,7 +172,8 @@
       <workItem from="1673977499883" duration="6157000" />
       <workItem from="1674051825368" duration="15373000" />
       <workItem from="1674069330636" duration="1122000" />
-      <workItem from="1674137768752" duration="14478000" />
+      <workItem from="1674137768752" duration="19440000" />
+      <workItem from="1674227952840" duration="3411000" />
     </task>
     <task id="LOCAL-00001" summary="верстка готова">
       <created>1672428130359</created>
