@@ -1,43 +1,13 @@
 import React, { Component } from 'react';
 
 export default class Timer extends Component {
-  state = {
-    timer: 'off'
-  }
 
   componentDidMount() {
-    const { sec } = this.props;
-    this.setState({seconds: sec});
+
   }
 
   componentWillUnmount() {
-    const { updateSecondsInTodo, id } = this.props;
-    const { seconds } = this.state;
-    updateSecondsInTodo(seconds, id);
-  }
 
-  timerToggle = (s) => {
-    let secCopy = s;
-    const { timer } = this.state;
-    let setIntervalTurnOn;
-    if (timer === 'off') {
-      setIntervalTurnOn = setInterval(() => {
-        if (secCopy > 0) {
-          secCopy -= 1;
-        }
-        this.setState({
-          seconds: secCopy
-        })
-      }, 1000);
-      this.setState({
-        timer: 'on',
-        setIntervalId: setIntervalTurnOn,
-      });
-    } else {
-      const { setIntervalId } = this.state;
-      clearInterval(setIntervalId);
-      this.setState({timer: 'off'});
-    }
   }
 
   convertSecInTime = (value) => {
@@ -61,22 +31,22 @@ export default class Timer extends Component {
   }
 
   onClickPlay = () => {
-    const { timer, seconds } = this.state;
+    const { id, timer, timerStart } = this.props;
     if (timer === 'off') {
-      this.timerToggle(seconds);
+      timerStart(id, timer);
     }
   }
 
   onClickPause = () => {
-    const { timer, seconds } = this.state;
+    const { id, timer, timerStop } = this.props;
     if (timer === 'on') {
-      this.timerToggle(seconds);
+      timerStop(id, timer);
     }
   }
 
   render() {
-    const { seconds } = this.state;
-    const timeInString = this.convertSecInTime(seconds);
+    const { sec } = this.props;
+    const timeInString = this.convertSecInTime(sec);
     return (
       <span className="description">
         <button type="button" className="icon icon-play" onClick={this.onClickPlay}/>

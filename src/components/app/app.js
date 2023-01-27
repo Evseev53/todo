@@ -14,6 +14,7 @@ export default class App extends Component {
   };
 
   deleteItem = (id) => {
+    this.timerStop(id);
     this.setState(({ todoData }) => {
       const newData = todoData.filter((el) => el.id !== id);
       return {
@@ -86,6 +87,8 @@ export default class App extends Component {
         id: this.maxId++,
         date: new Date(),
         sec: sumSec,
+        timer: 'off',
+        timerId: null
       };
       this.setState(({ todoData }) => {
         if (todoData.length) {
@@ -97,12 +100,42 @@ export default class App extends Component {
     }
   }
 
-  updateSecondsInTodo = (newSec, id) => {
+  timerStart = (id) => {
+    const timerId = setInterval(() => {
+      const { todoData } = this.state;
+      const todoDataCopy = Array.from(todoData);
+      const todo = todoDataCopy.filter(el => el.id === id);
+      if (todo.length) {
+        const todoCopy = JSON.parse(JSON.stringify(todo[0]));
+        let { sec } = todoCopy;
+        if (sec > 0) {
+          sec -= 1;
+        }
+        this.setState({
+          todoData: this.toggleProperty(todoData, id, 'sec', sec)
+        });
+      }
+    }, 1000);
+
+    const { todoData } = this.state;
+    const timerOn = this.toggleProperty(todoData, id, 'timer', 'on');
+    const saveId = this.toggleProperty(timerOn, id, 'timerId', timerId);
+    this.setState({
+      todoData: timerOn
+    });
+    this.setState({
+      todoData: saveId
+    });
+  }
+
+  timerStop = (id) => {
     const { todoData } = this.state;
     const todo = todoData.filter(el => el.id === id);
-    if (todo.length) {
-      todo[0].sec = newSec;
-    }
+    const { timerId } = todo[0];
+    clearInterval(timerId);
+    this.setState({
+      todoData: this.toggleProperty(todoData, id, 'timer', 'off')
+    })
   }
 
   render() {
@@ -119,7 +152,8 @@ export default class App extends Component {
         <section className="main">
           <TaskList
             todos={todoDataVisible}
-            updateSecondsInTodo={this.updateSecondsInTodo}
+            timerStart={this.timerStart}
+            timerStop={this.timerStop}
             onDeleted={(id) => this.deleteItem(id)}
             onToggleDone={this.onToggleDone}
             onToggleEdit={this.onToggleEdit}

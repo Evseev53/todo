@@ -55,6 +55,9 @@ export default class NewTaskForm extends Component {
         />
         <input
           name="min"
+          type="number"
+          min="0"
+          max="59"
           className="new-todo-form__timer"
           placeholder="Min"
           onKeyDown={this.onEnterDown}
@@ -62,6 +65,9 @@ export default class NewTaskForm extends Component {
         />
         <input
           name="sec"
+          type="number"
+          min="0"
+          max="59"
           className="new-todo-form__timer"
           placeholder="Sec"
           onKeyDown={this.onEnterDown}

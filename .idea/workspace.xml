@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-list/task-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list/task-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/timer/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.evseev/WebstormProjects/untitled&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.evseev/WebstormProjects/react-apps/todo-kata&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -131,9 +138,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:fix" />
-        <item itemvalue="npm.format" />
         <item itemvalue="Node.js.task.js" />
       </list>
     </recent_temporary>
@@ -173,7 +180,13 @@
       <workItem from="1674051825368" duration="15373000" />
       <workItem from="1674069330636" duration="1122000" />
       <workItem from="1674137768752" duration="19440000" />
-      <workItem from="1674227952840" duration="3411000" />
+      <workItem from="1674227952840" duration="4667000" />
+      <workItem from="1674300756214" duration="28000" />
+      <workItem from="1674652596918" duration="15147000" />
+      <workItem from="1674728210258" duration="15558000" />
+      <workItem from="1674818403539" duration="15377000" />
+      <workItem from="1674844074912" duration="37000" />
+      <workItem from="1674844597844" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="верстка готова">
       <created>1672428130359</created>

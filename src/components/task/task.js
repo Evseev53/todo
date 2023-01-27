@@ -33,14 +33,22 @@ export default class Task extends Component {
     text: this.props.label,
   };
 
-  onLabelChange = (e) => {
-    this.setState({
-      text: e.target.value,
-    });
-  };
-
   onEnterDown = (e) => {
+    if (e.code === 'Escape') {
+      const { onToggleEdit, id } = this.props;
+      const { text } = this.state;
+      onToggleEdit(id, text);
+      const input = document.querySelector('.new-todo');
+      input.focus();
+    }
+
     if (e.code === 'Enter') {
+      const newText = e.target.value;
+      const { onToggleEdit, id } = this.props;
+      this.setState({
+        text: newText,
+      });
+      onToggleEdit(id, newText);
       const input = document.querySelector('.new-todo');
       input.focus();
     }
@@ -65,7 +73,7 @@ export default class Task extends Component {
   };
 
   render() {
-    const { label, id, onDeleted, onToggleDone, onToggleEdit, done, editing, date, sec, updateSecondsInTodo } = this.props;
+    const { label, id, onDeleted, onToggleDone, onToggleEdit, done, editing, date, sec, timerStart, timerStop, timer } = this.props;
     const { text } = this.state;
     const distance = formatDistanceToNow(date, { addSuffix: true });
 
@@ -88,7 +96,7 @@ export default class Task extends Component {
             <input className="toggle" type="checkbox" defaultChecked={defaultChecked} id={id} onClick={onToggleDone} />
             <label htmlFor={id}>
               <span className="title">{label}</span>
-              <Timer updateSecondsInTodo={ updateSecondsInTodo } sec={sec} id={id}/>
+              <Timer timerStart={ timerStart } timerStop={ timerStop } sec={ sec } id={ id } timer={ timer }/>
               <span className="description">Created {distance}</span>
             </label>
             <button type="button" className="icon icon-edit" onClick={() => onToggleEdit(id)} />
@@ -99,7 +107,6 @@ export default class Task extends Component {
             className="edit"
             defaultValue={label}
             onChange={this.onLabelChange}
-            onBlur={() => onToggleEdit(id, text)}
             onKeyDown={this.onEnterDown}
           />
         </li>
