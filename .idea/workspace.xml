@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged">
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task-list/task-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list/task-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/timer/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.js" afterDir="false" />
-    </list>
+    <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,7 +174,7 @@
       <workItem from="1674728210258" duration="15558000" />
       <workItem from="1674818403539" duration="15377000" />
       <workItem from="1674844074912" duration="37000" />
-      <workItem from="1674844597844" duration="3324000" />
+      <workItem from="1674844597844" duration="3724000" />
     </task>
     <task id="LOCAL-00001" summary="верстка готова">
       <created>1672428130359</created>

@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 
 export default class Timer extends Component {
 
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
-  }
-
   convertSecInTime = (value) => {
     let sec = value;
     let min;
