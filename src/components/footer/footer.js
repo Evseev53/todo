@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './footer.css';
 import TasksFilter from '../task-filter/tasks-filter';
 
-function Footer({ todoCount, clearCompleted, onToggleVisible }) {
+export default function Footer({ todoCount, clearCompleted, onToggleVisible }) {
   return (
     <footer className="footer">
       <span className="todo-count">{todoCount} items left</span>
@@ -23,5 +23,3 @@ Footer.defaultProps = {
 Footer.propTypes = {
   todoCount: PropTypes.number,
 };
-
-export default Footer;

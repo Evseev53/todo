@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Timer extends Component {
+export default function Timer ({ sec, id, timer, timerStart, timerStop }) {
 
-  convertSecInTime = (value) => {
-    let sec = value;
+  const convertSecInTime = (value) => {
+    let seconds = value;
     let min;
-    let hour = sec / 3600;
+    let hour = seconds / 3600;
     hour = Math.trunc(hour);
-    sec -= hour * 3600;
-    min = sec / 60;
+    seconds -= hour * 3600;
+    min = seconds / 60;
     min = Math.trunc(min);
-    sec -= min * 60;
+    seconds -= min * 60;
     const convert = (num) => {
       num = num.toString();
       if (num.length === 1) {
@@ -19,36 +19,31 @@ export default class Timer extends Component {
       }
       return num;
     }
-    return `${convert(hour)}:${convert(min)}:${convert(sec)}`;
+    return `${convert(hour)}:${convert(min)}:${convert(seconds)}`;
   }
 
-  onClickPlay = () => {
-    const { id, timer, timerStart } = this.props;
+  const onClickPlay = () => {
     if (timer === 'off') {
       timerStart(id, timer);
     }
   }
 
-  onClickPause = () => {
-    const { id, timer, timerStop } = this.props;
+  const onClickPause = () => {
     if (timer === 'on') {
       timerStop(id, timer);
     }
   }
 
-  render() {
-    const { sec } = this.props;
-    const timeInString = this.convertSecInTime(sec);
-    return (
+  const timeInString = convertSecInTime(sec);
+  return (
+    <span className="description">
+      <button type="button" className="icon icon-play" onClick={onClickPlay}/>
+      <button type="button" className="icon icon-pause" onClick={onClickPause}/>
       <span className="description">
-        <button type="button" className="icon icon-play" onClick={this.onClickPlay}/>
-        <button type="button" className="icon icon-pause" onClick={this.onClickPause}/>
-        <span className="description">
-          <div className="timer">
-            { timeInString }
-          </div>
-        </span>
+        <div className="timer">
+          { timeInString }
+        </div>
       </span>
-    )
-  }
+    </span>
+  )
 }

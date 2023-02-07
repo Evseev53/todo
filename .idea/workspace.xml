@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged" />
+    <list default="true" id="9f09eb04-0610-4ec1-a85a-cc28760ccdd7" name="Changes" comment="husky+lint-staged">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-task-form/new-task-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-filter/tasks-filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-filter/tasks-filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-list/task-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list/task-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/timer/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.evseev/WebstormProjects/react-apps/todo-kata&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.evseev/WebstormProjects/react-apps/movies-app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -66,7 +75,7 @@
       <recent name="C:\Users\s.evseev\WebstormProjects\react-apps\todo-kata\src\components\footer" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.format">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -125,8 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint" />
         <item itemvalue="npm.format" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="Node.js.task.js" />
@@ -174,7 +183,13 @@
       <workItem from="1674728210258" duration="15558000" />
       <workItem from="1674818403539" duration="15377000" />
       <workItem from="1674844074912" duration="37000" />
-      <workItem from="1674844597844" duration="3724000" />
+      <workItem from="1674844597844" duration="4816000" />
+      <workItem from="1675352142930" duration="508000" />
+      <workItem from="1675366319139" duration="1398000" />
+      <workItem from="1675529886141" duration="8726000" />
+      <workItem from="1675596797301" duration="21444000" />
+      <workItem from="1675677960596" duration="21883000" />
+      <workItem from="1675757754761" duration="3878000" />
     </task>
     <task id="LOCAL-00001" summary="верстка готова">
       <created>1672428130359</created>
@@ -236,16 +251,5 @@
     <MESSAGE value="eslint/prettier" />
     <MESSAGE value="husky+lint-staged" />
     <option name="LAST_COMMIT_MESSAGE" value="husky+lint-staged" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/task-list/task-list.js</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
